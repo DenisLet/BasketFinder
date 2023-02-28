@@ -1,6 +1,6 @@
 # BasketFinder
 Script help to preliminary detect basketball matches for progressive betting.
-Model 1: For first 3 QUATERS(without 4th quater and OT)
+#Model 1: For first 3 QUATERS(without 4th quater and OT)
 1 step - 1% of deposite
 2 step - 2.5% of deposite
 3 step - 6.5% of deposite
