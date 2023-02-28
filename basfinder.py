@@ -183,7 +183,7 @@ def main(url):
         if data2[0]/data2[1] > 0.65 and data2[1]>=18:
             if data1[0]/data1[1] <0.37 and data1[1]>=18:
                 print(url)
-                print("2 QWT WIN AWAY TEAM")
+                print("1 QWT WIN AWAY TEAM")
                 print(data1,data2)
 
 
@@ -507,7 +507,7 @@ def main(url):
         if data1[1] - data1[0]<2 and data1[1]>18:
             if data2[1] - data2[0]<2 and data2[1]>=15:
                 print(url)
-                print("TEAM1 WIN ONE OF FIRST 4 QWTS")
+                print("TEAM1 WIN ONE OF 4 QWTS")
                 print('Normal :: ',data1, data2)
                 print('Vise versa :: ', data3, data4)
 
@@ -515,7 +515,7 @@ def main(url):
         if data1[1] - data1[0]<2 and data1[1]>18:
             if data2[1] - data[2]<2 and data2[1]>=15:
                 print(url)
-                print("TEAM2 WIN ONE OF FIRST 4 QWTS")
+                print("TEAM2 WIN ONE OF 4 QWTS")
                 print('Normal :: ',data1, data2)
                 print('Vise versa :: ', data3, data4)
 
