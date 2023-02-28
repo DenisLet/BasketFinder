@@ -1,11 +1,13 @@
 # BasketFinder
 Script help to preliminary detect basketball matches for progressive betting.
-#Model 1: For first 3 QUATERS(without 4th quater and OT)
+
+Model 1: For first 3 QUATERS(without 4th quater and OT)
 1 step - 1% of deposite
 2 step - 2.5% of deposite
 3 step - 6.5% of deposite
+
 Approx. ROI during 200 matches is 12-14 %.
-link to verificator: https://bet-hub.com/sub/239185/SteelScrape.B.U/stats/all/
+Link to verifier: https://bet-hub.com/sub/239185/SteelScrape.B.U/stats/all/
 
 
 Model 2: For quarter number 3 and quarter number 4(successively)
