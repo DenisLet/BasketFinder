@@ -7,7 +7,7 @@ Model 1: For first 3 QUATERS(without 4th quater and OT)
 3 step - 6.5% of deposit
 
 Approx. ROI during 200 matches is 12-14 %.
-Link to verifier: https://bet-hub.com/sub/239185/SteelScrape.B.U/stats/all/
+
 
 
 Model 2: For quarter number 3 and quarter number 4(successively)
