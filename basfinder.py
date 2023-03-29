@@ -33,9 +33,9 @@ def main(url):
     browser.get(url)
     browser.implicitly_wait(1)
     team_home = browser.find_elements(By.CSS_SELECTOR, "a.participant__participantName")[0].get_attribute(
-            "href") + "/results/"
+            "href") + "results/"
     team_away = browser.find_elements(By.CSS_SELECTOR, "a.participant__participantName")[1].get_attribute(
-            "href") + "/results/"
+            "href") + "results/"
     title = browser.find_element(By.CSS_SELECTOR, ".tournamentHeader__country").text
 
     def separator(matches):
@@ -254,34 +254,34 @@ def main(url):
 
     def case_3_home(data1,data2,data3,data4):
         if data1[1] - data1[0]<2 and data1[1]>18:
-            if data2[0]<2 and data2[1]>=15:
+            if data2[1] - data2[0] < 2 and data2[1]>=15:
                 print(url)
-                print("TEAM1 WIN ONE OF FIRST 3 QWTS...WITHOUT LOSES")
+                print("TEAM1 WIN ONE OF FIRST 3 QWTS... NORNAL")
                 print('Normal :: ',data1, data2)
                 print('Vise versa :: ', data3, data4)
 
     def case_3_away(data1,data2,data3,data4):
         if data1[1] - data1[0]<2 and data1[1]>18:
-            if data2[0]<2 and data2[1]>=15:
+            if data2[1] - data2[0] < 2 and data2[1]>=15:
                 print(url)
-                print("TEAM2 WIN ONE OF FIRST 3 QWTS...WITHOUT LOSES")
+                print("TEAM2 WIN ONE OF FIRST 3 QWTS...NORNAL")
                 print('Normal :: ',data1, data2)
                 print('Vise versa :: ', data3, data4)
 
 
-    def case_with_lose_3_home(data1,data2):
-        if data1[1] - data1[0]<2 and data1[1]>18:
-            if data2[1] - data2[0]<1 and data2[1]>15:
-                print(url)
-                print("TEAM1 WIN ONE OF 3 QWTS (INCLUDING LOSES OPPONENTS)")
-                print(data1,data2)
-
-    def case_with_lose_3_away(data1,data2):
-        if data1[1] - data1[0]<2 and data1[1]>18: # team win one of 3
-            if data2[1] - data2[0]<1 and data2[1]>15: # team lose one of 3
-                print(url)
-                print("TEAM2 WIN ONE OF 3 QWTS (INCLUDING LOSES OPPONENTS)")
-                print(data1,data2)
+    # def case_with_lose_3_home(data1,data2):
+    #     if data1[1] - data1[0]<2 and data1[1]>18:
+    #         if data2[1] - data2[0]<1 and data2[1]>15:
+    #             print(url)
+    #             print("TEAM1 WIN ONE OF 3 QWTS (INCLUDING LOSES OPPONENTS)")
+    #             print(data1,data2)
+    #
+    # def case_with_lose_3_away(data1,data2):
+    #     if data1[1] - data1[0]<2 and data1[1]>18: # team win one of 3
+    #         if data2[1] - data2[0]<1 and data2[1]>15: # team lose one of 3
+    #             print(url)
+    #             print("TEAM2 WIN ONE OF 3 QWTS (INCLUDING LOSES OPPONENTS)")
+    #             print(data1,data2)
 
 
     def home_second_if_lose_first(data):
@@ -359,18 +359,18 @@ def main(url):
     case_home_win_2_after_lose_1(team1_win2_after_lose1_home,team2_lose2_after_win1_away)
     case_away_win_2_after_lose_1(team2_win2_after_lose1_away,team1_lose2_after_win1_home)
 
-    case_with_lose_3_home(team1_win1of3_home, team2_lose1of3_away)
-    case_with_lose_3_away(team2_win1of3_away, team1_lose1of3_home)
+    # case_with_lose_3_home(team1_win1of3_home, team2_lose1of3_away)
+    # case_with_lose_3_away(team2_win1of3_away, team1_lose1of3_home)
 
-    case_3_home(team1_win1of3_home,team2_win3of3_away,team1_win1of3_away, team2_lose1of3_home)
-    case_3_away(team2_win1of3_away,team1_win3of3_home, team2_win1of3_home, team1_lose1of3_away)
+    case_3_home(team1_win1of3_home,team2_lose1of3_away,team1_win1of3_away, team2_lose1of3_home)
+    case_3_away(team2_win1of3_away,team1_lose1of3_home, team2_win1of3_home, team1_lose1of3_away)
 
     condition_home(team1_win1q_home, team2_win1q_away)
     condition_away(team1_win1q_home, team2_win1q_away)
 
     # print(team1_win1of3_home, team2_lose1of3_away)
     # print(team2_win1of3_away, team1_lose1of3_home)
-    #
+
     # print(team1_win1of3_home,team2_win3of3_away)
     # print(team2_win1of3_away,team1_win3of3_home)
     #
@@ -507,7 +507,7 @@ def main(url):
         if data1[1] - data1[0]<2 and data1[1]>18:
             if data2[1] - data2[0]<2 and data2[1]>=15:
                 print(url)
-                print("TEAM1 WIN ONE OF 4 QWTS")
+                print("TEAM1 WIN ONE OF 4 QWTS...With handicap")
                 print('Normal :: ',data1, data2)
                 print('Vise versa :: ', data3, data4)
 
@@ -515,7 +515,7 @@ def main(url):
         if data1[1] - data1[0]<2 and data1[1]>18:
             if data2[1] - data[2]<2 and data2[1]>=15:
                 print(url)
-                print("TEAM2 WIN ONE OF 4 QWTS")
+                print("TEAM2 WIN ONE OF 4 QWTS...With handicap")
                 print('Normal :: ',data1, data2)
                 print('Vise versa :: ', data3, data4)
 
