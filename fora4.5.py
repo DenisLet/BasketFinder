@@ -331,7 +331,7 @@ def main(url):
         for val in range(round(ave)-2,round(ave)+2):
             scored = 0
             for i in data1:
-                if (int(i[2])+ int(i[3])) > val or (int(i[4])+int(i[5])) > val or (int(i[6])+int(i[7])) > val and len(data1)>=60:
+                if (int(i[2])+ int(i[3])) > val or (int(i[4])+int(i[5])) > val or (int(i[6])+int(i[7]) > val) and len(data1)>=60:
                     scored += 1
             dict_results_more1[f'{val}'] = round(scored/len(data1),3)*100 if len(data1)!= 0 else None
 
@@ -340,7 +340,7 @@ def main(url):
             between = []
 
             for i in data1:
-                if (int(i[2])+ int(i[3])) < val or (int(i[4])+int(i[5])) < val or (int(i[6])+int(i[7])) < val and len(data1)>=70:
+                if (int(i[2])+ int(i[3])) < val or (int(i[4])+int(i[5])) < val or (int(i[6])+int(i[7]) < val) and len(data1)>=70:
                     count += 1
             dict_results_less1[f'{val}'] = round(count/len(data1),3)*100
 

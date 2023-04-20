@@ -365,6 +365,8 @@ def main(url):
     case_3_home(team1_win1of3_home,team2_lose1of3_away,team1_win1of3_away, team2_lose1of3_home)
     case_3_away(team2_win1of3_away,team1_lose1of3_home, team2_win1of3_home, team1_lose1of3_away)
 
+    print('TEAM1 Whome/Waway, TEAM2 Lhome/Laway ',team1_win1of3_home,team1_win1of3_away, team2_lose1of3_home,team2_lose1of3_away )
+
     condition_home(team1_win1q_home, team2_win1q_away)
     condition_away(team1_win1q_home, team2_win1q_away)
 
@@ -526,6 +528,57 @@ def main(url):
     print(team1_win1of4_home,team2_lose1of4_away, team1_win1of4_away, team2_lose1of4_home)
     print(team2_win1of4_away,team1_lose1of4_home, team2_win1of4_home, team1_lose1of4_away)
     print()
+
+    def home_win_one_of2(scores):
+        win, matches = 0, len(scores)
+
+        for data in scores:
+            if data[2] > data[3] or data[4] > data[5]:
+                win += 1
+        return win, matches
+
+    def away_win_one_of2(scores):
+        win, matches = 0, len(scores)
+
+        for data in scores:
+            if data[3] > data[2] or data[5] > data[4]:
+                win += 1
+        return win, matches
+
+
+    def home_lose_one_of2(data):
+        lose, matches =0, len(data)
+
+        for scores in data:
+            if scores[2]<scores[3] or scores[4]<scores[5]:
+                lose += 1
+        return lose, matches
+
+
+    def away_lose_one_of2(data):
+        lose, matches =0, len(data)
+
+        for scores in data:
+            if scores[3] < scores[2] or scores[5] < scores[4]:
+                lose += 1
+        return lose, matches
+
+
+
+    team1_win1of2_home, team1_win1of2_away = home_win_one_of2(team1_results_home), away_win_one_of2(team1_results_away)
+    team2_lose1of2_home, team2_lose1of2_away = home_lose_one_of2(team2_results_home), away_lose_one_of2(team2_results_away)
+
+
+
+
+    print('*'*50)
+    print()
+    print(team1_win1of2_home, team1_win1of2_away)
+    print(team2_lose1of2_home, team2_lose1of2_away)
+    print(url)
+    print('*'*50)
+
+
 
 for i in schedule:
     try:
